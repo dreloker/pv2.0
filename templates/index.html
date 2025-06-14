@@ -15,8 +15,8 @@
     <header>
         <div class="header-wrapper">
             <div class="header contenedor">
-            <a class="logo" href="{{ url_for('index') }}">
-                <svg version="1.1" id="logokoud" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            <a class="logo" href="{{ url_for('index') }}" class="logo" aria-label="Logotipo de Koud">
+                <svg version="1.1" id="logokoud" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 viewBox="0 0 458.12 100" xml:space="preserve">
                 <path fill="currentColor" d="M96.42,26.68L96.42,26.68l2.75-0.01V2.94l-2.97,0l0,0L27.98,93.2V2.94H4.25v94.92h23.69l0.03,0.02l15.47-20.47
                     c4.71-6.13,10.16-12.09,16.12-11.38c3.14,0.37,5.75,3.26,7.73,8.59c4.74,12.72,12.5,18.36,18.18,20.85c4.9,2.15,9.08,2.4,10.72,2.4
@@ -46,11 +46,24 @@
         </div>
     </header>
     <main>
-        <div class="hero contenedor">
-        <h1>Diseño gráfico accesible y atractivo.</h1>
-        <h2 class="presentacion">¡Pónle color a tus ideas!</h2>
-        <a href="/services" class="btn-cta">Ver servicios</a>
-        </div>
+        <section class="hero">
+            <h2 class="heroizq">Pónle color a tus ideas!</h2>
+            <a href="/services" class="btn-cta" >Ver servicios</a>
+        </section>
+        <section class="hero-cta">
+            <div class="heroder">
+                <h1>Diseño gráfico accesible y atractivo.</h1>
+            </div>
+            <div class="circulos-container" aria-hidden="true">
+                <div class="circulo c1"></div>
+                <div class="circulo c2"></div>
+                <div class="circulo c3"></div>
+                <div class="circulo c4"></div>
+                <div class="circulo c5"></div>
+            </div>
+        </section>
     </main>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>   
 </body>
 </html>
