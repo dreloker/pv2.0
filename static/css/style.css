@@ -2,20 +2,25 @@
     --fparrafos: 'Titillium', sans-serif; 
     --fheading: 'Glook', serif;
 
-    --primario: #684b34;
-    --secundario: #e9e9e9;
-    --blanco: #f5f2ed;
-    --negros: #171717;
-    --medios: #7a736d;
+    --primario: #1cffbb;
+    --secundario: #3d5194;
+    --blanco: #f4edf5;
+    --negros: #181818;
+    --medios: #6d797a;
 }
 
 /*Globales*/
 
 html {
   font-size: 62.5%;       /* 1rem = 10px */
-  box-sizing: border-box; /* Define border-box para heredar */
+  box-sizing: border-box; 
   margin: 0;
   padding: 0;
+}
+
+body {
+    background-color: var(--negros);
+    color: var(--blanco);
 }
 
 *, *::before, *::after {
@@ -33,13 +38,16 @@ header {
 
   nav ul {
     display: flex;
+    width: 100%;
     gap: 2rem;
     list-style: none;
     padding: 0;
     margin: 0;
+    justify-content: space-around;
  }
 
   nav li a {
+    flex: 1;
     text-decoration: none;
     color: inherit;
     font-family: var(--fparrafos);
@@ -49,20 +57,46 @@ header {
 
   .contenedor-header {
     z-index: 100;
-    width: 1200px;
+    width: 90%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     position: fixed;
     align-items: baseline;
   }
+
+  .logo {
+    width: 50%;
+    position: relative;
+  }
     
   .logo svg {
-    width: 200px;
+    width: 170px;
     height: auto;
-    display: block;
+    color: var(--secundario);
   }
 
   .navegacion {
     position: relative;
+    display: flex;
+    width: 50%;
+    bottom: 0.3rem;
+    left: 2rem;
+  }
 
+  .nav__enlace {
+    color: var(--blanco);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .nav__enlace:hover {
+    color: var(--primario)
+  } 
+
+  .nav__enlace:active {
+  color: var(--secundario);
+  }
+
+  .nav__enlace:focus {
+  outline: none;
   }
