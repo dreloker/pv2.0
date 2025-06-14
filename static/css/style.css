@@ -1,0 +1,68 @@
+:root {
+    --fparrafos: 'Titillium', sans-serif; 
+    --fheading: 'Glook', serif;
+
+    --primario: #684b34;
+    --secundario: #e9e9e9;
+    --blanco: #f5f2ed;
+    --negros: #171717;
+    --medios: #7a736d;
+}
+
+/*Globales*/
+
+html {
+  font-size: 62.5%;       /* 1rem = 10px */
+  box-sizing: border-box; /* Define border-box para heredar */
+  margin: 0;
+  padding: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit; 
+
+}
+
+header {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+  nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+ }
+
+  nav li a {
+    text-decoration: none;
+    color: inherit;
+    font-family: var(--fparrafos);
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .contenedor-header {
+    z-index: 100;
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    align-items: baseline;
+  }
+    
+  .logo svg {
+    width: 200px;
+    height: auto;
+    display: block;
+  }
+
+  .navegacion {
+    position: relative;
+
+  }
