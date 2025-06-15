@@ -38,7 +38,7 @@ h1 {
 header {
     position: fixed;
     width: 100%;
-    height: 10vh;
+    height: 7vh;
     top: 0;
     z-index: 100;
     display: flex;
@@ -54,14 +54,16 @@ header {
     align-items: flex-end;
     height: 100%;
     padding-left: 2rem;
-    padding-bottom: 1rem;
+    background-color: var(--negros);
   }
 
   .logo svg {
     display: block;
     width: 320px;
-    color: var(--negros);
-    position: static; /* elimina el relative innecesario */
+    position: static;
+    fill: var(--blanco);
+    padding-bottom: 0.5rem;
+    padding-right: 1rem;
   }
 
   .navegacion {
@@ -71,47 +73,55 @@ header {
     width: 40%;
     height: 100%;
     right: 0;
-    background-color: var(--blanco);
+    background-color: var(--negros);
   }
 
-  nav ul {
-    display: flex;
-    width: 100%;
-    gap: 2rem;
-    list-style: none;
-    justify-content: space-around;
-    margin-bottom: 1rem;
- }
+nav ul {
+  display: flex;
+  width: 100%;
+  gap: 2rem;
+  list-style: none;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
 
-  nav li a {
-    flex: 1;
-    text-decoration: none;
-    font-family: var(--fparrafos);
-    font-size: 2.1rem;
-    font-weight: 300;
-  }
+nav li {
+  flex: 1;
+}
 
-  .nav__enlace {
-    color: var(--negros);
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
+nav li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  font-family: var(--fparrafos);
+  font-size: 2.1rem;
+  font-weight: 300;
+  color: var(--blanco);
+  text-align: center;
+  transition: color 0.3s ease;
+}
 
-  .nav__enlace:hover {
-    color: var(--primario)
-  } 
+/* Subrayado animado */
+nav li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1rem;
+  width: 100%;
+  height: 2px;
+  background-color: var(--blanco);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
 
-  .nav__enlace:active {
-  color: var(--secundario);
-  }
-
-  .nav__enlace:focus {
-  outline: none;
-  }
+nav li a:hover::after {
+  transform: scaleX(1);
+}
 
 
 /* Inicio contenido */
-
 main {
     display: flex;
     justify-content: center;
@@ -120,28 +130,36 @@ main {
     height: 100vh;
     top: 10vh;
     background: linear-gradient(var(--angle, -45deg), var(--primario), var(--claros), var(--secundario));
-    transition: background 0.2s ease;
+    transition: background 0.5s ease;
 }
 
 /*hero izquierda*/
-
 .hero {
-  width: 50%;
+  width: 60%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
   z-index: 20;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.heroizq-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background-color: var(--negros);
+  padding: 2rem;
 }
 
 .heroizq {
-  width: 80%;
+  width: 60%;
   font-family: var(--fheading);
-  color: var(--negros);
-  font-size: 17rem;
+  color: var(--claros);
+  font-size: 7rem;
   font-weight: 900;
-  line-height: 0.7;
-  padding-left: 8rem;
+  line-height: 0.8;
 }
 
 .btn-cta {
@@ -152,7 +170,7 @@ main {
   width: 200px;
   height: 50px;
   top: 10rem;
-  left: 8rem;
+  left: 0;
   color: white;
   text-decoration: none;
   font-weight: bold;
@@ -171,7 +189,7 @@ main {
 }
 
 .btn-cta {
-  background: linear-gradient(45deg, var(--primario), var(--secundario));
+  background-color: var(--negros);
   z-index: 0;
 }
 
@@ -181,7 +199,7 @@ main {
 
 /*hero derecha*/
 .hero-cta {
-  width: 50%;
+  width: 40%;
   height: 100%;
   display: flex;
   align-items: center;
