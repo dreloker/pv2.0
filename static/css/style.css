@@ -2,11 +2,12 @@
     --fparrafos: 'Titillium', sans-serif; 
     --fheading: 'Glook', serif;
 
-    --primario: #adffe6;
-    --secundario: #3d5194;
-    --blanco: #f4edf5;
+    --primario: #00ffce;
+    --secundario: #d3562e;
+    --blanco: #ffffff;
+    --claros: #defff9;    
+    --medios: #4d6b6b;
     --negros: #171717;
-    --medios: #272727;
 }
 
 /*Globales*/
@@ -19,8 +20,7 @@ html {
 }
 
 body {
-    background-color: var(--medios);
-    color: var(--blanco);
+    color: var(--negros);
     width: 100%;
 }
 
@@ -33,76 +33,66 @@ h1 {
     font-size: 2.7rem;
 }
 
-  .contenedor {
-    width: 90%;
-  }
-
-/* Navbar */
+/* Navbar ------------------------------*/
 
 header {
     position: fixed;
     width: 100%;
-    height: 70px;
+    height: 10vh;
     top: 0;
     z-index: 100;
+    display: flex;
+    justify-content: space-between;
 }
 
-.header-wrapper {
-    width: 100%;
-    height: 70px;
+   /* background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), var(--medios), var(--negros));
+    transition: background 0.1s ease; */
+
+
+  .logo {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), var(--medios), var(--negros));
-    transition: background 0.1s ease; 
-}
+    align-items: flex-end;
+    height: 100%;
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+  }
+
+  .logo svg {
+    display: block;
+    width: 320px;
+    color: var(--negros);
+    position: static; /* elimina el relative innecesario */
+  }
+
+  .navegacion {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    width: 40%;
+    height: 100%;
+    right: 0;
+    background-color: var(--blanco);
+  }
 
   nav ul {
     display: flex;
     width: 100%;
     gap: 2rem;
     list-style: none;
-    padding: 0;
-    margin: 0;
     justify-content: space-around;
+    margin-bottom: 1rem;
  }
 
   nav li a {
     flex: 1;
     text-decoration: none;
-    color: inherit;
     font-family: var(--fparrafos);
-    font-size: 1.5rem;
-    font-weight: 600;
-  }
-
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-  }
-
-  .logo {
-    width: 50%;
-    position: relative;
-  }
-    
-  .logo svg {
-    width: 170px;
-    height: auto;
-    color: var(--primario);
-  }
-
-  .navegacion {
-    position: relative;
-    display: flex;
-    width: 50%;
-    bottom: 0.3rem;
-    left: 2rem;
+    font-size: 2.1rem;
+    font-weight: 300;
   }
 
   .nav__enlace {
-    color: var(--blanco);
+    color: var(--negros);
     text-decoration: none;
     transition: color 0.3s ease;
   }
@@ -128,7 +118,9 @@ main {
     align-items: center;
     width: 100%;
     height: 100vh;
-    top: 70px;
+    top: 10vh;
+    background: linear-gradient(var(--angle, -45deg), var(--primario), var(--claros), var(--secundario));
+    transition: background 0.2s ease;
 }
 
 /*hero izquierda*/
@@ -140,13 +132,12 @@ main {
   justify-content: center;
   flex-direction: column;
   z-index: 20;
-  background-color: var(--negros);
 }
 
 .heroizq {
   width: 80%;
   font-family: var(--fheading);
-  color: var(--medios);
+  color: var(--negros);
   font-size: 17rem;
   font-weight: 900;
   line-height: 0.7;
@@ -192,7 +183,6 @@ main {
 .hero-cta {
   width: 50%;
   height: 100%;
-  background: linear-gradient(var(--negros), var(--medios));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -200,59 +190,4 @@ main {
 
 .heroder {
   z-index: 20;
-}
-
-.circulos-container {
-  position: fixed;
-  right: 0;
-  width: 900px;
-  height: 900px;
-  transform-origin: center center;
-  z-index: 10;
-  scale: 1.7;
-}
-
-.circulo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border-radius: 50%;
-  pointer-events: auto;
-  transform: translate(-50%, -50%);
-  transform-origin: center center;
-}
-
-.c1 { 
-  width: 900px; 
-  height: 900px;
-  background: linear-gradient(45deg, #1b2899, #dd4719);
-}
-
-.c2 { 
-  width: 720px; 
-  height: 720px;
-  background: linear-gradient(45deg, #90ddc6, #be93c4);
-}
-
-.c3 { 
-  width: 540px; 
-  height: 540px;
-  background: linear-gradient(45deg, #dd9090, #93c49a);
-}
-
-.c4 { 
-  width: 360px;
-  height: 360px;
-  background: linear-gradient(45deg, #dcdd90, #a693c4);
-}
-
-.c5 { 
-  width: 180px;  
-  height: 180px;
-  background: linear-gradient(45deg, #5b5dc7, #df8a64);
-}
-
-@keyframes girar {
-  from { transform: translate(-50%, -50%) rotate(0deg); }
-  to   { transform: translate(-50%, -50%) rotate(360deg); }
 }
