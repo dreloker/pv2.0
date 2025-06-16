@@ -29,6 +29,16 @@ body {
   padding: 0;
 }
 
+.h100 {
+    height: 100%;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 *, *::before, *::after {
   box-sizing: inherit; 
 }
@@ -212,11 +222,46 @@ nav li a:hover::after {
 /* Intro-portafolio */
 
 .intro-port {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background-color: var(--negros);
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--negros);
+  display: flex;
+  overflow: hidden;
 }
+
+.intro-port-izq {
+  width: 20%;
+}
+
+.intro-port-mid {
+  width: 40%;
+  overflow: hidden; /* 👈 muy importante */
+  position: relative;
+  display: flex;
+}
+
+.cariz-track {
+  display: flex;
+  width: calc(100% * 2); /* 👈 2 imágenes */
+  transition: transform 1s ease-in-out;
+}
+
+.cariz-item {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.cariz-item img {
+  height: auto;
+
+}
+
+.intro-port-der {
+    width: 40%;
+}
+
+
 
    /* background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), var(--medios), var(--negros));
     transition: background 0.1s ease; */

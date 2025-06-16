@@ -68,3 +68,17 @@ window.addEventListener("wheel", function (e) {
     isScrolling = false;
   }, 1600);
 });
+
+
+const contenedor = document.querySelector(".cariz-track");
+const totalSlides = document.querySelectorAll(".cariz-item").length;
+let index = 0;
+
+function actualizarCarrusel() {
+  contenedor.style.transform = `translateX(-${index * 100}%)`;
+}
+
+setInterval(() => {
+  index = (index + 1) % totalSlides;
+  actualizarCarrusel();
+}, 5000);
