@@ -35,12 +35,18 @@ body {
 
 h1 {
     font-family: var(--fheading);
-    font-size: 4.4rem;
+    font-size: 10rem;
     font-weight: 900;
 }
 
 h2, h3, h4, h5, h6 {
     font-family:  var(--fparrafos);
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+p {
+    font-family: var(--fparrafos);
     font-size: 1.7rem;
     font-weight: 300;
 }
@@ -56,10 +62,6 @@ header {
     justify-content: space-between;
 }
 
-   /* background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), var(--medios), var(--negros));
-    transition: background 0.1s ease; */
-
-
   .logo {
     display: flex;
     align-items: flex-end;
@@ -71,7 +73,7 @@ header {
 
   .logo svg {
     display: block;
-    width: 320px;
+    width: 90%;
     position: static;
     fill: var(--blanco);
     padding-bottom: 1rem;
@@ -107,7 +109,7 @@ nav li a {
     width: 100%;
     text-decoration: none;
     font-family: var(--fparrafos);
-    font-size: 1.7rem;
+    font-size: 2rem;
     font-weight: 300;
     color: var(--blanco);
     text-align: center;
@@ -154,7 +156,6 @@ nav li a:hover::after {
 .svgmosaico svg {
     width: 100%;
     height: 100%;
-    object-fit: cover;
 
 }
 
@@ -170,20 +171,47 @@ nav li a:hover::after {
 
 /*presentacion*/
 .presentacion {
-    position: inherit;
+    position: absolute;
     width: 40%;
-    height: 40vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    height: auto;
     z-index: 1;
-    bottom: 0;
-    pointer-events: none;
-    padding: 2rem;
     left: 20%;
-    background-color: var(--negros);
-    color: var(--blanco);
-
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
 }
 
+.pres-h1 {
+    font-size: 10rem;
+    line-height: 0.8;
+    background-color: var(--primario);
+    padding: 5rem;
+    color: var(--medios);
+}
 
+.pres-p {
+    padding-top: 10rem;
+    font-size: 3rem;
+    padding: 5rem;
+    color: var(--medios);
+    background-color: var(--blanco);
+}
+
+.pres-h2 {
+    font-style: italic;
+    padding: 2.5rem 5rem 2.5rem;
+    background-color: var(--negros);
+    color: var(--blanco);
+}
+
+/* Intro-portafolio */
+
+.intro-port {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--negros);
+}
+
+   /* background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), var(--medios), var(--negros));
+    transition: background 0.1s ease; */
