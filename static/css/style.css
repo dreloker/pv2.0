@@ -1,6 +1,6 @@
 :root {
     --fparrafos: 'Titillium', sans-serif; 
-    --fheading: 'Glook', serif;
+    --fheading: 'Playfair Display', serif;
 
     --primario: #00ffce;
     --secundario: #d3562e;
@@ -35,20 +35,20 @@ body {
 
 h1 {
     font-family: var(--fheading);
-    font-size: 10rem;
+    font-size: 7rem;
     font-weight: 900;
 }
 
 h2, h3, h4, h5, h6 {
     font-family:  var(--fparrafos);
     font-size: 3rem;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 p {
     font-family: var(--fparrafos);
     font-size: 1.7rem;
-    font-weight: 300;
+    font-weight: 200;
 }
 
 /* Navbar ------------------------------*/
@@ -110,7 +110,7 @@ nav li a {
     text-decoration: none;
     font-family: var(--fparrafos);
     font-size: 2rem;
-    font-weight: 300;
+    font-weight: 400;
     color: var(--blanco);
     text-align: center;
     transition: color 0.3s ease;
@@ -182,11 +182,12 @@ nav li a:hover::after {
 }
 
 .pres-h1 {
-    font-size: 10rem;
-    line-height: 0.8;
+    font-size: 7rem;
     background-color: var(--primario);
     padding: 5rem;
     color: var(--medios);
+    text-align: center;
+
 }
 
 .pres-p {
@@ -195,6 +196,7 @@ nav li a:hover::after {
     padding: 5rem;
     color: var(--medios);
     background-color: var(--blanco);
+    letter-spacing: 0.03em;
 }
 
 .pres-h2 {
@@ -202,6 +204,9 @@ nav li a:hover::after {
     padding: 2.5rem 5rem 2.5rem;
     background-color: var(--negros);
     color: var(--blanco);
+    font-weight: 200;
+    text-align: center;
+    letter-spacing: 0.05em;
 }
 
 /* Intro-portafolio */
