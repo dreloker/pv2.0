@@ -222,44 +222,45 @@ nav li a:hover::after {
 /* Intro-portafolio */
 
 .intro-port {
-  position: relative;
+  display: flex;
   width: 100%;
   height: 100vh;
-  background-color: var(--negros);
-  display: flex;
   overflow: hidden;
+  background-color: var(--negros);
 }
 
-.intro-port-izq {
+.intro-port-lat {
   width: 20%;
 }
 
-.intro-port-mid {
-  width: 40%;
-  overflow: hidden; /* 👈 muy importante */
-  position: relative;
-  display: flex;
-}
-
-.cariz-track {
-  display: flex;
-  width: calc(100% * 2); /* 👈 2 imágenes */
-  transition: transform 1s ease-in-out;
-}
-
-.cariz-item {
-  flex: 0 0 100%;
-  max-width: 100%;
-}
-
-.cariz-item img {
-  height: auto;
-
-}
-
+.intro-port-izq,
 .intro-port-der {
-    width: 40%;
+  width: 40%;
+  position: relative;
+  overflow: hidden;
 }
+
+.img-slider {
+  position: absolute;
+  width: 100%;
+  height: 200%; /* 2 imágenes apiladas */
+  animation: slideUp 6s infinite;
+}
+
+.img-slider img {
+  width: 100%;
+  height: 100vh; /* Cada imagen ocupa la mitad del alto */
+  object-fit: cover;
+  display: block;
+}
+
+/* Animación vertical */
+@keyframes slideUp {
+  0% { transform: translateY(0%); }
+  50% { transform: translateY(-50%); }
+  100% { transform: translateY(0%); }
+}
+
 
 
 

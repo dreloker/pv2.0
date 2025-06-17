@@ -70,15 +70,44 @@ window.addEventListener("wheel", function (e) {
 });
 
 
-const contenedor = document.querySelector(".cariz-track");
-const totalSlides = document.querySelectorAll(".cariz-item").length;
-let index = 0;
 
-function actualizarCarrusel() {
-  contenedor.style.transform = `translateX(-${index * 100}%)`;
+
+const imagenes = [
+  "ameliasintro.png",
+  "artistry-intro.png",
+  "digital-intro.png",
+  "g7-introx-intro.png",
+  "jerarquia-intro.png",
+  "manualdemarca-intro.png",
+  "muuble-intro.png",
+  "Powerflux-intro.png",
+  "synoptics-intro.png",
+  "tradicional-intro.png",
+  "tradicional2-intro.png",
+  "vastgoed-intro.png",
+  "vector-intro.png",
+
+
+];
+
+// Función para obtener 2 imágenes aleatorias distintas
+function obtenerImagenesAleatorias() {
+  const copia = [...imagenes];
+  const img1 = copia.splice(Math.floor(Math.random() * copia.length), 1)[0];
+  const img2 = copia[Math.floor(Math.random() * copia.length)];
+  return [img1, img2];
 }
 
-setInterval(() => {
-  index = (index + 1) % totalSlides;
-  actualizarCarrusel();
-}, 5000);
+function insertarSlider(selector, clase) {
+  const contenedor = document.querySelector(selector);
+  const [imgA, imgB] = obtenerImagenesAleatorias();
+
+  contenedor.innerHTML = `
+    <img src="/static/img/${imgA}" alt="Imagen aleatoria ${clase} A">
+    <img src="/static/img/${imgB}" alt="Imagen aleatoria ${clase} B">
+  `;
+}
+
+// Cargar imágenes al iniciar
+insertarSlider(".img-slider.izq", "izq");
+insertarSlider(".img-slider.der", "der");
