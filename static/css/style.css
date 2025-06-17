@@ -1,6 +1,5 @@
 :root {
-    --fparrafos: 'Titillium', sans-serif; 
-    --fheading: 'Playfair Display', serif;
+    --ftipo: 'Titillium', sans-serif; 
 
     --primario: #00ffce;
     --secundario: #d3562e;
@@ -44,19 +43,20 @@ img {
 }
 
 h1 {
-    font-family: var(--fheading);
+    font-family: var(--ftipo);
     font-size: 7rem;
     font-weight: 900;
+    text-transform: uppercase;
 }
 
 h2, h3, h4, h5, h6 {
-    font-family:  var(--fparrafos);
-    font-size: 3rem;
+    font-family:  var(--ftipo);
+    font-size: 2.5rem;
     font-weight: 400;
 }
 
 p {
-    font-family: var(--fparrafos);
+    font-family: var(--ftipo);
     font-size: 1.7rem;
     font-weight: 200;
 }
@@ -74,7 +74,6 @@ header {
 
   .logo {
     display: flex;
-    align-items: flex-end;
     height: 100%;
     width: 20%;
     padding-left: 2rem;
@@ -93,7 +92,6 @@ header {
   .navegacion {
     position: relative;
     display: flex;
-    align-items: flex-end;
     width: 40%;
     height: 100%;
     right: 0;
@@ -101,11 +99,12 @@ header {
   }
 
 nav ul {
+    position: absolute;
     display: flex;
     width: 100%;
     gap: 2rem;
     list-style: none;
-    justify-content: space-around;
+    bottom: 0;
     margin-bottom: 1rem;
 }
 
@@ -116,10 +115,11 @@ nav li {
 nav li a {
     position: relative;
     display: block;
+    height: 100%;
     width: 100%;
     text-decoration: none;
-    font-family: var(--fparrafos);
-    font-size: 2rem;
+    font-family: var(--ftipo);
+    font-size: 1.7rem;
     font-weight: 400;
     color: var(--blanco);
     text-align: center;
@@ -150,7 +150,7 @@ nav li a:hover::after {
 .intro-index {
     position: relative;
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -161,12 +161,6 @@ nav li a:hover::after {
     width: 100%;
     height: 100%;
     z-index: 0;
-}
-
-.svgmosaico svg {
-    width: 100%;
-    height: 100%;
-
 }
 
 .bloquesvg {
@@ -182,37 +176,43 @@ nav li a:hover::after {
 /*presentacion*/
 .presentacion {
     position: absolute;
-    width: 40%;
-    height: auto;
-    z-index: 1;
-    left: 20%;
-    bottom: 0;
+    width: 100%;
+    height: 40%;
+    z-index: 15;
     display: flex;
     flex-direction: column;
+    pointer-events: none;
+    bottom: 0;
+}
+.div-pres {
+  display: flex;
+  height: 80%;
 }
 
 .pres-h1 {
-    font-size: 7rem;
-    background-color: var(--primario);
-    padding: 5rem;
-    color: var(--medios);
-    text-align: center;
-
+    background-color: var(--negros);
+    color: var(--blanco);
+    text-align: right;
+    width: 60%;
+    pointer-events: auto;
+    letter-spacing: 0.5rem;
 }
 
 .pres-p {
     padding-top: 10rem;
-    font-size: 3rem;
+    font-size: 2rem;
     padding: 5rem;
     color: var(--medios);
     background-color: var(--blanco);
     letter-spacing: 0.03em;
+    width: 40%;
+    pointer-events: auto;
 }
 
 .pres-h2 {
     font-style: italic;
-    padding: 2.5rem 5rem 2.5rem;
-    background-color: var(--negros);
+    padding: 2.5rem;
+    background-color: var(--primario);
     color: var(--blanco);
     font-weight: 200;
     text-align: center;
@@ -222,6 +222,7 @@ nav li a:hover::after {
 /* Intro-portafolio */
 
 .intro-port {
+  position: relative;
   display: flex;
   width: 100%;
   height: 100vh;
@@ -231,6 +232,7 @@ nav li a:hover::after {
 
 .intro-port-lat {
   width: 20%;
+  background-color: var(--negros);
 }
 
 .intro-port-izq,

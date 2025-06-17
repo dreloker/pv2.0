@@ -8,7 +8,7 @@
     <title>Koud | Diseño para la comunicación visual</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,900&family=Titillium+Web:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,400;0,700;0,900;1,200;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicon.png') }}">
@@ -20,7 +20,7 @@
     <header class="wd100">
             <a class="logo" href="{{ url_for('index') }}" aria-label="Logotipo de Koud">
                 <svg version="1.1" id="isologokoud" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                    viewBox="0 0 210.19 28.93" style="enable-background:new 0 0 210.19 28.93;" xml:space="preserve">
+                    viewBox="0 0 210.19 28.93" style="enable-background:new 0 0 210.19 28.93;">
                 <g class="logotipo">
                     <path class="st0" d="M121.75,9.65L121.75,9.65l0.65,0V4.07l-0.7,0l0,0l-16.03,21.21V4.07h-5.58v22.3h5.57l0.01,0.01l3.64-4.81
                         c1.11-1.44,2.39-2.84,3.79-2.67c0.74,0.09,1.35,0.77,1.82,2.02c1.11,2.99,2.94,4.31,4.27,4.9c1.15,0.51,2.13,0.56,2.52,0.56
@@ -59,7 +59,11 @@
     <main class="wd100">
         <section class="intro-index">
             <div class="svgmosaico">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" 
+     width="100%" 
+     height="auto" 
+     preserveAspectRatio="xMidYMid slice">
+>
                 <g class="bloquesvg b1" id="uuid-e080becc-1e14-4f78-855f-870c7a41804c" data-name="b25">
                     <rect x="1536" y="216" width="384" height="216" style="fill: #defff9; stroke-width: 0px;"/>
                     <rect x="1728" y="216" width="192" height="216" style="fill: #d3562e; stroke-width: 0px;"/>
@@ -163,16 +167,18 @@
                 </svg>
             </div>
             <div class="presentacion">
-                <h1 class="pres-h1" data-speed="2">Diseño gráfico accesible y atractivo.</h1>
-                <p class="pres-p" data-speed="1">Especializado en branding minimalista, modular y orgánico. Creo diseños intencionales y distintivos para personas emprendedoras y empresas que buscan destacar con claridad y consistencia visual.
-                </p>
+                <div class="div-pres">
+                    <h1 class="pres-h1" data-speed="2">Diseño para la comunicación visual.</h1>
+                    <p class="pres-p" data-speed="1">Especializado en branding minimalista, modular y orgánico. Creo diseños intencionales y distintivos para personas emprendedoras y empresas que buscan destacar con claridad y consistencia visual.
+                    </p>
+                </div>
                 <h2 class="pres-h2" data-speed="0.5">Donde la forma sigue al significado.</h2>
 
             </div>
         </section>
         <section class="intro-port">
             <div class="intro-port-lat h100">
-
+                <p></p>
             </div>
             <div class="intro-port-izq h100">
                 <div class="img-slider izq"></div>
