@@ -86,28 +86,70 @@ const imagenes = [
   "tradicional2-intro.png",
   "vastgoed-intro.png",
   "vector-intro.png",
-
-
 ];
 
-// Función para obtener 2 imágenes aleatorias distintas
-function obtenerImagenesAleatorias() {
-  const copia = [...imagenes];
-  const img1 = copia.splice(Math.floor(Math.random() * copia.length), 1)[0];
-  const img2 = copia[Math.floor(Math.random() * copia.length)];
-  return [img1, img2];
+const historialReciente = []; // imágenes mostradas recientemente
+const maxHistorial = 3;       // no repetir las últimas 3 imágenes
+
+function obtenerImagenAleatoria(excluir = []) {
+  const noUsables = [...historialReciente, ...excluir];
+  const disponibles = imagenes.filter(img => !noUsables.includes(img));
+  
+  if (disponibles.length === 0) {
+    // Si se acabaron las opciones, liberar las más antiguas
+    historialReciente.splice(0, 1);
+    return obtenerImagenAleatoria(excluir);
+  }
+
+  const seleccion = disponibles[Math.floor(Math.random() * disponibles.length)];
+  historialReciente.push(seleccion);
+
+  // mantener tamaño del historial
+  if (historialReciente.length > maxHistorial) {
+    historialReciente.shift();
+  }
+
+  return seleccion;
 }
 
-function insertarSlider(selector, clase) {
-  const contenedor = document.querySelector(selector);
-  const [imgA, imgB] = obtenerImagenesAleatorias();
-
-  contenedor.innerHTML = `
-    <img src="/static/img/${imgA}" alt="Imagen aleatoria ${clase} A">
-    <img src="/static/img/${imgB}" alt="Imagen aleatoria ${clase} B">
-  `;
+function crearSliderInicial(slider, clase) {
+  const img = obtenerImagenAleatoria();
+  slider.innerHTML = `<img class="arriba" src="/static/img/${img}" alt="${clase} inicial">`;
+  slider.style.transform = "translateY(0%)";
 }
 
-// Cargar imágenes al iniciar
-insertarSlider(".img-slider.izq", "izq");
-insertarSlider(".img-slider.der", "der");
+function iniciarCarrusel(slider, clase) {
+  setInterval(() => {
+    const imgArriba = slider.querySelector(".arriba");
+    const nombreActual = imgArriba.getAttribute("src").split("/").pop();
+    const nuevaImg = obtenerImagenAleatoria([nombreActual]);
+
+    const imgNueva = document.createElement("img");
+    imgNueva.src = `/static/img/${nuevaImg}`;
+    imgNueva.alt = `Nueva ${clase}`;
+    imgNueva.classList.add("abajo");
+
+    slider.appendChild(imgNueva);
+    slider.style.transition = "transform 1s ease-in-out";
+    slider.style.transform = "translateY(-50%)";
+
+    setTimeout(() => {
+      const antiguaArriba = slider.querySelector(".arriba");
+      if (antiguaArriba) antiguaArriba.remove();
+      imgNueva.classList.remove("abajo");
+      imgNueva.classList.add("arriba");
+
+      slider.style.transition = "none";
+      slider.style.transform = "translateY(0%)";
+    }, 1000);
+  }, 6000);
+}
+
+const izqSlider = document.querySelector(".img-slider.izq");
+const derSlider = document.querySelector(".img-slider.der");
+
+crearSliderInicial(izqSlider, "izq");
+crearSliderInicial(derSlider, "der");
+
+iniciarCarrusel(izqSlider, "izq");
+setTimeout(() => iniciarCarrusel(derSlider, "der"), 2000); // desfase
