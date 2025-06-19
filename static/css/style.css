@@ -117,66 +117,168 @@ nav li a {
 }
 
 /* Subrayado animado */
-
-/*nav li a::after {
+nav li a::after {
     content: '';
     position: absolute;
-    left: 0;
+    width: 0%;
+    height: 1px;
     bottom: -1rem;
-    width: 100%;
-    height: 2px;
+    left: 0%;
     background-color: var(--negros);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.5s ease;
+    transition: width 0.3s ease, left 0.3s ease;
 }
 
 nav li a:hover::after {
-    transform: scaleX(1);
-} */
-
-nav li a::after {
-  content: '';
-  position: absolute;
-  width: 0%;
-  height: 1px;
-  bottom: -1rem;
-  left: 50%;
-  background-color: var(--negros);
-  transition: width 0.3s ease, left 0.3s ease;
-}
-
-nav li a:hover::after {
-  width: 100%;
-  left: 0;
+    width: 100%;
+    left: 0;
 }
 
 nav li a::before {
-  content: '✦'; /* Puedes usar otros: ✦ ✱ → ★ 🡆 */
-  margin-right: 0.5rem;
-  color: var(--negros);
-  font-size: 0.7em;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+    content: '✦'; /* Puedes usar otros: ✦ ✱ → ★ 🡆 */
+    margin-right: 0.5rem;
+    color: var(--negros);
+    font-size: 0.7em;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 nav li a:hover::before {
-  opacity: 1;
+    opacity: 1;
 }
 
 
 /*logo hero */
 
 .logo-wrapper {
-  position: fixed;
-  top: 20%;
-  left: 20%;
-  width: 40vw;
-  height: auto;
-  z-index: 1000;
-  transition: transform 0.6s ease, top 0.6s ease, left 0.6s ease, width 0.6s ease;
-  transform: scale(1);
-  transform-origin: top left;
-  pointer-events: none;
+    position: fixed;
+    bottom: 40%;
+    left: 20%;
+    width: 40vw;
+    height: auto;
+    z-index: 1000;
 }
+
+.koudk,
+.koudo,
+.koudu,
+.koudd,
+.iso {
+    fill: transparent;
+    stroke: var(--negros);
+    stroke-width: 0.3;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: draw 7s ease forwards;
+    transition: fill 0.2s ease;
+}
+
+.koudk:hover,
+.koudo:hover,
+.koudu:hover,
+.koudd:hover,
+.iso:hover {
+        fill: var(--primario);
+        transition: stroke 0.5s ease;
+}
+
+.koudk:not(:hover),
+.koudo:not(:hover),
+.koudu:not(:hover),
+.koudd:not(:hover),
+.iso:not(:hover) {
+    transition: fill 3s ease;
+
+}
+
+/* Animación de trazo */
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/*Inicio contenido*/
+
+main {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.intro-index {
+    height: 100vh;  
+    position: relative;
+    
+}
+
+.intro-h1 {
+    position: absolute;
+    display: block;
+    bottom: 40%;
+    left: 60%;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+body.loaded .intro-h1 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.saltoservicios {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    background-color: var(--negros);
+    color: var(--claros);
+    font-family: var(--fheader);
+    font-size: 3rem;
+    left: 0;
+    bottom: 0;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.saltoservicios svg {
+    width: 70px;
+    height: auto;
+}
+
+.saltoservicios:hover {
+    background-color: var(--primario);
+    transition: background-color 0.5s ease;    
+}
+
+.saltoservicios:not(:hover) {
+    transition: background-color 1s ease;
+}
+
+.flechasi {
+    stroke: var(--claros);
+    fill: transparent;
+    stroke-width: 1px;
+}
+
+.saltoservicios:hover .flechasi {
+        fill: var(--claros);
+        stroke: transparent;
+
+}
+
+
+
+
+
+
+.intro-port {
+    height: 100vh;  
+}
+
+
+
 
