@@ -8,7 +8,7 @@
     <title>Koud | Diseño para la comunicación visual</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,400;0,700;0,900;1,200;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oi&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicon.png') }}">
@@ -16,37 +16,39 @@
 </head>
 
 <body class="wd100">
-
-    <header class="wd100">
+            <div class="logo-wrapper">
             <a class="logo" href="{{ url_for('index') }}" aria-label="Logotipo de Koud">
-                <svg version="1.1" id="isologokoud" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                    viewBox="0 0 210.19 28.93" style="enable-background:new 0 0 210.19 28.93;">
-                <g class="logotipo">
-                    <path class="st0" d="M121.75,9.65L121.75,9.65l0.65,0V4.07l-0.7,0l0,0l-16.03,21.21V4.07h-5.58v22.3h5.57l0.01,0.01l3.64-4.81
-                        c1.11-1.44,2.39-2.84,3.79-2.67c0.74,0.09,1.35,0.77,1.82,2.02c1.11,2.99,2.94,4.31,4.27,4.9c1.15,0.51,2.13,0.56,2.52,0.56
-                        c0.06,0,0.11,0,0.14,0h0.56V20.8h-0.7c-1.57-0.09-2.95-0.81-4.29-1.52c-1.92-1.01-3.72-1.96-5.77-0.81l2.31-3.06
-                        C118.32,9.65,120.73,9.65,121.75,9.65z"/>
-                    <path class="st0" d="M139.13,4.17c-6.12,0-11.09,4.96-11.09,11.09c0,6.12,4.96,11.09,11.09,11.09s11.09-4.96,11.09-11.09
-                        C150.22,9.13,145.25,4.17,139.13,4.17z M133.53,24.05V6.46c1.62-1.03,3.54-1.64,5.6-1.64c2,0,3.87,0.57,5.45,1.54v17.77
-                        c-1.59,0.98-3.46,1.54-5.45,1.54C137.07,25.68,135.15,25.08,133.53,24.05z"/>
-                    <path class="st0" d="M178.11,4.13h-5.58v19.98c-1.61,1.01-3.51,1.6-5.54,1.6c-2.02,0-3.91-0.58-5.51-1.58v-20h-5.58v11.15
-                        c0,6.12,4.96,11.09,11.09,11.09c6.12,0,11.12-4.96,11.12-11.09l0,0V4.13z"/>
-                    <path class="st0" d="M194.93,4.07h-11.21v0.7h0.54c1.35,0.09,2.42,0.53,3.17,1.33c1.34,1.42,1.23,3.51,1.23,3.53l0,0.03l0,0.03
-                        c0,0.03,0.26,2.67-2.39,5.3c-2.79,2.77-2.58,5.53-2.55,5.83c0,0.16,0.01,0.31,0.01,0.47l0.01,4.82v0.27h11.19
-                        c6.16,0,11.15-4.99,11.15-11.15C206.08,9.06,201.09,4.07,194.93,4.07z M194.93,25.68h-6.01c-0.69-0.03-2.13-0.21-3.2-1.21
-                        c-0.89-0.84-1.34-2.07-1.34-3.67l0-0.04c0-0.03-0.29-2.67,2.36-5.3c2.46-2.44,2.61-4.87,2.6-5.62l0.01-5.07h5.6V25.68z"/>
+
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    viewBox="0 0 199.3 104.5">
+                <g id="logotipokoud">
+                    <path class="st0" d="M48.6,67.3L48.6,67.3H50V55.5h-1.5l0,0l-33.7,44.5V55.5H3.1v46.8h11.7l0,0l7.6-10.1c2.3-3,5-6,8-5.6
+                        c1.6,0.2,2.8,1.6,3.8,4.2c2.3,6.3,6.2,9.1,9,10.3c2.4,1.1,4.5,1.2,5.3,1.2c0.1,0,0.2,0,0.3,0H50V90.7h-1.5c-3.3-0.2-6.2-1.7-9-3.2
+                        c-4-2.1-7.8-4.1-12.1-1.7l4.9-6.4C41.4,67.3,46.5,67.3,48.6,67.3z"/>
+                    <path class="st0" d="M75.4,56.2c-12.9,0-23.3,10.4-23.3,23.3c0,12.9,10.4,23.3,23.3,23.3s23.3-10.4,23.3-23.3S88.3,56.2,75.4,56.2z
+                        M63.7,98V61c3.4-2.2,7.4-3.4,11.8-3.4c4.2,0,8.1,1.2,11.4,3.2v37.3c-3.3,2.1-7.3,3.2-11.4,3.2C71.1,101.4,67.1,100.1,63.7,98z"/>
+                    <path class="st0" d="M147.6,56.1h-11.7v42c-3.4,2.1-7.4,3.4-11.6,3.4c-4.2,0-8.2-1.2-11.6-3.3v-42H101v23.4
+                        c0,12.9,10.4,23.3,23.3,23.3c12.9,0,23.4-10.4,23.4-23.3l0,0V56.1z"/>
+                    <path class="st0" d="M173.3,56h-23.5v1.5h1.1c2.8,0.2,5.1,1.1,6.7,2.8c2.8,3,2.6,7.4,2.6,7.4v0.1v0.1c0,0.1,0.5,5.6-5,11.1
+                        c-5.9,5.8-5.4,11.6-5.4,12.2c0,0.3,0,0.7,0,1l0,10.1v0.6h23.5c12.9,0,23.4-10.5,23.4-23.4C196.7,66.5,186.2,56,173.3,56z
+                        M173.3,101.4h-12.6c-1.4-0.1-4.5-0.4-6.7-2.5c-1.9-1.8-2.8-4.3-2.8-7.7v-0.1c0-0.1-0.6-5.6,5-11.1c5.2-5.1,5.5-10.2,5.5-11.8
+                        l0-10.6h11.8L173.3,101.4L173.3,101.4z"/>
                 </g>
-                <g class="imagotipo">
-                    <path class="st0" d="M91.32,8.54c-1.18-1.09-5.28-4.22-13.36-4.22c-0.06,0-6.03-0.06-12.29,2.57c-3.69,1.55-6.76,3.71-9.14,6.43
-                        c-2.97,3.4-4.84,7.67-5.55,12.69l0.76,0.12c0.98-5.32,2.84-9.46,5.53-12.29c2.29-2.4,5.05-3.71,7.99-3.77
-                        c4.92-0.11,9.14,3.25,10.31,8.17c0.97,4.39,4.88,7.68,9.56,7.68c5.41,0,9.79-4.39,9.79-9.79C94.94,13.07,93.53,10.33,91.32,8.54z"/>
-                    <path class="st0" d="M45.55,8.54c-1.18-1.09-5.28-4.22-13.36-4.22c-0.06,0-6.03-0.06-12.29,2.57c-3.69,1.55-6.76,3.71-9.14,6.43
-                        c-2.97,3.4-4.84,7.67-5.55,12.69l0.76,0.12c0.98-5.32,2.84-9.46,5.53-12.29c2.29-2.4,5.05-3.71,7.99-3.77
-                        c4.92-0.11,9.14,3.25,10.31,8.17c0.97,4.39,4.88,7.68,9.56,7.68c5.41,0,9.79-4.39,9.79-9.79C49.17,13.07,47.76,10.33,45.55,8.54z"/>
+                <g id="isotipokoud">
+                    <path class="st0" d="M185.7,12.3c-2.5-2.3-11.1-8.9-28.1-8.9c-0.1,0-12.7-0.1-25.8,5.4c-7.7,3.3-14.2,7.8-19.2,13.5
+                        c-6.2,7.1-10.2,16.1-11.7,26.7l1.6,0.3c2.1-11.2,6-19.9,11.6-25.8c4.8-5,10.6-7.8,16.8-7.9c10.3-0.2,19.2,6.8,21.7,17.2
+                        c2,9.2,10.2,16.1,20.1,16.1c11.4,0,20.6-9.2,20.6-20.6C193.3,21.8,190.4,16,185.7,12.3z"/>
+                    <path class="st0" d="M87.8,12.3C85.4,10,76.8,3.4,59.8,3.4c-0.1,0-12.7-0.1-25.8,5.4c-7.7,3.3-14.2,7.8-19.2,13.5
+                        C8.5,29.5,4.6,38.4,3.1,49l1.6,0.3c2.1-11.2,6-19.9,11.6-25.8c4.8-5,10.6-7.8,16.8-7.9c10.3-0.2,19.2,6.8,21.7,17.2
+                        c2,9.2,10.2,16.1,20.1,16.1c11.4,0,20.6-9.2,20.6-20.6C95.4,21.8,92.5,16,87.8,12.3z"/>
                 </g>
                 </svg>
+
             </a>
-            <nav class="navegacion">
+        </div>
+
+    <header class="wd100">
+            <nav class="navbar">
                 <ul class>
                 <li><a href="{{ url_for('index') }}" class="nav__enlace">Inicio</a></li>
                 <li><a href="{{ url_for('services') }}" class="nav__enlace">Servicios</a></li>
@@ -58,137 +60,10 @@
 
     <main class="wd100">
         <section class="intro-index">
-            <div class="svgmosaico">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" 
-     width="100%" 
-     height="auto" 
-     preserveAspectRatio="xMidYMid slice">
->
-                <g class="bloquesvg b1" id="uuid-e080becc-1e14-4f78-855f-870c7a41804c" data-name="b25">
-                    <rect x="1536" y="216" width="384" height="216" style="fill: #defff9; stroke-width: 0px;"/>
-                    <rect x="1728" y="216" width="192" height="216" style="fill: #d3562e; stroke-width: 0px;"/>
-                </g>
-                <g  class="bloquesvg b2" id="uuid-668c1d83-e2ff-4482-a1c7-332d02975fcf" data-name="b24">
-                    <rect x="1536" y="864" width="384" height="216" style="fill: #171717; stroke-width: 0px;"/>
-                    <polygon points="1536 1080 1920 1080 1920 864 1536 1080" style="fill: #00ffce; stroke-width: 0px;"/>
-                </g>
-                <g class="bloquesvg b3" id="uuid-80bbf79f-4c18-4ad0-8467-a10870d6da5e" data-name="b23">
-                    <rect x="0" y="864" width="384" height="216" style="fill: #171717; stroke-width: 0px;"/>
-                    <polygon points="0 1080 384 1080 384 864 0 1080" style="fill: #00ffce; stroke-width: 0px;"/>
-                </g>
-                <g class="bloquesvg b4" id="uuid-f62c9211-1c9c-4245-afe2-88052e8e69b4" data-name="b22">
-                    <rect x="384" y="432" width="384" height="216" style="fill: #171717; stroke-width: 0px;"/>
-                    <polygon points="384 648 768 648 768 432 384 648" style="fill: #defff9; stroke-width: 0px;"/>
-                </g>
-                <g class="bloquesvg b5" id="uuid-9d4a6105-5350-4f23-b14d-e0b2446184fe" data-name="b21">
-                    <rect x="1152" y="432" width="384" height="216" style="fill: #defff9; stroke-width: 0px;"/>
-                    <polygon points="1152 648 1536 648 1536 432 1152 648" style="fill: #4d6b6b; stroke-width: 0px;"/>
-                </g>
-                <g class="bloquesvg b6" id="uuid-52db3beb-bc79-4379-82c1-361739cc860a" data-name="b20">
-                    <rect x="1536" y="0" width="384" height="216" style="fill: #4d6b6b; stroke-width: 0px;"/>
-                    <polygon points="1536 0 1920 0 1920 216 1536 0" style="fill: #00ffce; stroke-width: 0px;"/>
-                </g>
-                <g class="bloquesvg b7" id="uuid-7af82620-8b91-484f-9ca3-5a6590781894" data-name="b19">
-                    <rect x="768" y="216" width="384" height="216" style="fill: #defff9; stroke-width: 0px;"/>
-                    <polygon points="1152 216 768 216 768 432 1152 216" style="fill: #00ffce; stroke-width: 0px;"/>
-                </g>
-                <g class="bloquesvg b8" id="uuid-1b86808f-e22d-4fec-b0ab-34b9a387e1fa" data-name="b18">
-                    <rect x="768" y="0" width="384" height="216" style="fill: #171717; stroke-width: 0px;"/>
-                    <polygon points="768 0 1152 0 1152 216 768 0" style="fill: #d3562e; stroke-width: 0px;"/>
-                </g>
-                <g class="bloquesvg b9" id="uuid-543f428a-a81a-49d2-a055-523808a4e37e" data-name="b17">
-                    <rect x="0" y="0" width="384" height="216" style="fill: #defff9; stroke-width: 0px;"/>
-                    <polygon points="384 0 0 0 0 216 384 0" style="fill: #4d6b6b; stroke-width: 0px;"/>
-                </g>
-                <g class="bloquesvg b10" id="uuid-70820450-71db-4b2a-91c8-076c55618e53" data-name="b16">
-                    <rect x="384" y="864" width="384" height="216" style="fill: #d3562e; stroke-width: 0px;"/>
-                    <polygon points="384 864 768 864 768 1080 384 864" style="fill: #defff9; stroke-width: 0px;"/>
-                </g>
-                <g class="bloquesvg b11" id="uuid-b47716da-2c39-4cd0-a1b3-ddd166e57fda" data-name="b15">
-                    <rect x="1152" y="648" width="384" height="216" style="fill: #d3562e; stroke-width: 0px;"/>
-                    <polygon points="1152 648 1536 648 1536 864 1152 648" style="fill: #171717; stroke-width: 0px;"/>
-                </g>
-                <g class="bloquesvg b12" id="uuid-ce43532e-a8ce-4369-bbbe-5ac6f61db0a7" data-name="b14">
-                    <rect x="1536" y="648" width="384" height="216" style="fill: #d3562e; stroke-width: 0px;"/>
-                    <rect x="1536" y="648" width="384" height="112.56" style="fill: #defff9; stroke-width: 0px;"/>
-                </g>
-                <g class="bloquesvg b13" id="uuid-c479536b-ceee-4f6c-952f-f88a61756b18" data-name="b13">
-                    <rect y="432" width="384" height="216" style="fill: #00ffce; stroke-width: 0px;"/>
-                    <rect y="432" width="384" height="112.56" style="fill: #defff9; stroke-width: 0px;"/>
-                </g>
-                <g class="bloquesvg b14" id="uuid-7b588d17-46ca-4da3-8095-3090d8b74a45" data-name="b12">
-                    <rect x="384" y="0" width="384" height="216" style="fill: #d3562e; stroke-width: 0px;"/>
-                    <rect x="384" y="0" width="384" height="112.56" style="fill: #4d6b6b; stroke-width: 0px;"/>
-                </g>
-                <g class="bloquesvg b15" id="uuid-d3e0498d-fd03-4115-b03a-d74d439a2a3b" data-name="b11">
-                    <rect x="768" y="648" width="384" height="216" style="fill: #defff9; stroke-width: 0px;"/>
-                    <rect x="768" y="648" width="384" height="112.56" style="fill: #00ffce; stroke-width: 0px;"/>
-                </g>
-                <g class="bloquesvg b16" id="uuid-324ae181-6451-42b1-a71e-8f093b09d030" data-name="b10">
-                    <rect x="1152" y="216" width="384" height="216" style="fill: #00ffce; stroke-width: 0px;"/>
-                    <rect x="1152" y="216" width="384" height="112.56" style="fill: #171717; stroke-width: 0px;"/>
-                </g>
-                <g class="bloquesvg b17" id="uuid-9ab6f871-2afa-4fc0-a50a-97f5eb2057cb" data-name="b9">
-                    <rect x="768" y="432" width="384" height="216" style="fill: #d3562e; stroke-width: 0px;"/>
-                    <rect x="960" y="432" width="192" height="216" style="fill: #171717; stroke-width: 0px;"/>
-                </g>
-                <g class="bloquesvg b18" id="uuid-48dfdebf-f8aa-4358-9b00-a8fcd22cefbc" data-name="b8">
-                    <rect y="216" width="384" height="216" style="fill: #d3562e; stroke-width: 0px;"/>
-                    <rect x="192" y="216" width="192" height="216" style="fill: #171717; stroke-width: 0px;"/>
-                </g>
-                <g class="bloquesvg b19" id="uuid-665def4a-54b2-43ca-a5d3-48d65ce0d350" data-name="b7">
-                    <rect x="1152" y="864" width="384" height="216" style="fill: #defff9; stroke-width: 0px;"/>
-                    <rect x="1344" y="864" width="192" height="216" style="fill: #4d6b6b; stroke-width: 0px;"/>
-                </g>
-                <g class="bloquesvg b20" id="uuid-cef2d610-c991-4c96-b0cd-6cce94acadaf" data-name="b6">
-                    <rect x="384" y="648" width="384" height="216" style="fill: #171717; stroke-width: 0px;"/>
-                    <rect x="576" y="648" width="192" height="216" style="fill: #d3562e; stroke-width: 0px;"/>
-                </g>
-                <g class="bloquesvg b21" id="uuid-37902292-617c-4486-853f-fefb498ce87d" data-name="b5">
-                    <rect x="1536" y="432" width="384" height="216" style="fill: #4d6b6b; stroke-width: 0px;"/>
-                    <circle cx="1728" cy="540" r="108" style="fill: #171717; stroke-width: 0px;"/>
-                </g>
-                <g class="bloquesvg b22" id="uuid-7b79c26f-c14e-4d02-8b01-d36b0d4cfb85" data-name="b4">
-                    <rect x="1152" width="384" height="216" style="fill: #defff9; stroke-width: 0px;"/>
-                    <circle cx="1344" cy="108" r="108" style="fill: #d3562e; stroke-width: 0px;"/>
-                </g>
-                <g class="bloquesvg b23" id="uuid-3e9fd091-7c97-4c85-a882-a9cfaa5aee33" data-name="b3">
-                    <rect x="768" y="864" width="384" height="216" style="fill: #171717; stroke-width: 0px;"/>
-                    <circle cx="960" cy="972" r="108" style="fill: #00ffce; stroke-width: 0px;"/>
-                </g>
-                <g class="bloquesvg b24" id="uuid-b5712fe3-c176-4449-bf74-9d75686d6a9a" data-name="b2">
-                    <rect x="384" y="216" width="384" height="216" style="fill: #defff9; stroke-width: 0px;"/>
-                    <circle cx="576" cy="324" r="108" style="fill: #4d6b6b; stroke-width: 0px;"/>
-                </g>
-                <g class="bloquesvg b25" id="uuid-3cb39071-d491-48d3-9a0a-a824c0c32226" data-name="b1">
-                    <rect x="0" y="648" width="384" height="216" style="fill: #4d6b6b; stroke-width: 0px;"/>
-                    <circle cx="192" cy="756" r="108" style="fill: #defff9; stroke-width: 0px;"/>
-                </g>
-                </svg>
-            </div>
-            <div class="presentacion">
-                <div class="div-pres">
-                    <h1 class="pres-h1" data-speed="2">Diseño para la comunicación visual.</h1>
-                    <p class="pres-p" data-speed="1">Especializado en branding minimalista, modular y orgánico. Creo diseños intencionales y distintivos para personas emprendedoras y empresas que buscan destacar con claridad y consistencia visual.
-                    </p>
-                </div>
-                <h2 class="pres-h2" data-speed="0.5">Donde la forma sigue al significado.</h2>
-
-            </div>
+           
+           
         </section>
         <section class="intro-port">
-            <div class="intro-port-lat h100">
-                <p></p>
-            </div>
-            <div class="intro-port-izq h100">
-                <div class="img-slider izq"></div>
-            </div>
-                
-            </div>
-            <div class="intro-port-der h100">
-                <div class="img-slider der"></div>                
-            </div>
-            
 
         </section>
     </main>

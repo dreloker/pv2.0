@@ -1,11 +1,12 @@
 :root {
-    --ftipo: 'Titillium', sans-serif; 
+    --fheader: 'Oi', cursive;
+    --ftexto: 'Montserrat', Sans-serif;
 
-    --primario: #00ffce;
-    --secundario: #d3562e;
+    --primario: #86eac2;
+    --secundario: #e27b60;
     --blanco: #ffffff;
-    --claros: #defff9;    
-    --medios: #4d6b6b;
+    --claros: #f0f4ef;    
+    --medios: #638476;
     --negros: #171717;
 }
 
@@ -19,7 +20,7 @@ html {
 }
 
 body {
-    color: var(--negros);
+    background-color: var(--claros);
 }
 
 .wd100 {
@@ -43,64 +44,50 @@ img {
 }
 
 h1 {
-    font-family: var(--ftipo);
-    font-size: 7rem;
-    font-weight: 900;
-    text-transform: uppercase;
+    font-family: var(--fheader);
+    font-size: 5rem;
 }
 
-h2, h3, h4, h5, h6 {
-    font-family:  var(--ftipo);
-    font-size: 2.5rem;
+h2 {
+    font-family:  var(--ftexto);
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-family:  var(--ftexto);
+    font-size: 3rem;
     font-weight: 400;
 }
 
 p {
-    font-family: var(--ftipo);
-    font-size: 1.7rem;
-    font-weight: 200;
+    font-family: var(--ftexto);
+    font-size: 2rem;
+    font-weight: 100;
+    color: var(--negros);
 }
 
 /* Navbar ------------------------------*/
 
 header {
     position: fixed;
-    height: 7vh;
+    height: 10vh;
     top: 0;
     z-index: 100;
-    display: flex;
-    justify-content: space-between;
 }
 
-  .logo {
-    display: flex;
-    height: 100%;
-    width: 20%;
-    padding-left: 2rem;
-    background-color: var(--negros);
-  }
-
-  .logo svg {
-    display: block;
-    width: 90%;
-    position: static;
-    fill: var(--blanco);
-    padding-bottom: 1rem;
-    padding-right: 1rem;
-  }
-
-  .navegacion {
+.navbar {
     position: relative;
     display: flex;
-    width: 40%;
+    width: 100%;
     height: 100%;
     right: 0;
-    background-color: var(--negros);
   }
 
 nav ul {
     position: absolute;
     display: flex;
+    justify-content: flex-end;
     width: 100%;
     gap: 2rem;
     list-style: none;
@@ -115,13 +102,15 @@ nav li {
 nav li a {
     position: relative;
     display: block;
-    height: 100%;
+
+/*height: 100%; ? */
+
     width: 100%;
     text-decoration: none;
-    font-family: var(--ftipo);
+    font-family: var(--ftexto);
     font-size: 1.7rem;
     font-weight: 400;
-    color: var(--blanco);
+    color: var(--negros);
     text-align: center;
     transition: color 0.3s ease;
 }
@@ -145,125 +134,16 @@ nav li a:hover::after {
 }
 
 
-/* Index contenido */
-/*fondo*/
-.intro-index {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+.logo-wrapper {
+  position: fixed;
+  top: 20%;
+  left: 20%;
+  width: 40vw;
+  height: auto;
+  z-index: 1000;
+  transition: transform 0.6s ease, top 0.6s ease, left 0.6s ease, width 0.6s ease;
+  transform: scale(1);
+  transform-origin: top left;
+  pointer-events: none;
 }
 
-.svgmosaico {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-}
-
-.bloquesvg {
-    opacity: 0.3;
-    transition: opacity 7s ease;
-}
-
-.bloquesvg:hover {
-    opacity: 1;
-    transition: opacity 0.2s ease;
-}
-
-/*presentacion*/
-.presentacion {
-    position: absolute;
-    width: 100%;
-    height: 40%;
-    z-index: 15;
-    display: flex;
-    flex-direction: column;
-    pointer-events: none;
-    bottom: 0;
-}
-.div-pres {
-  display: flex;
-  height: 80%;
-}
-
-.pres-h1 {
-    background-color: var(--negros);
-    color: var(--blanco);
-    text-align: right;
-    width: 60%;
-    pointer-events: auto;
-    letter-spacing: 0.5rem;
-}
-
-.pres-p {
-    padding-top: 10rem;
-    font-size: 2rem;
-    padding: 5rem;
-    color: var(--medios);
-    background-color: var(--blanco);
-    letter-spacing: 0.03em;
-    width: 40%;
-    pointer-events: auto;
-}
-
-.pres-h2 {
-    font-style: italic;
-    padding: 2.5rem;
-    background-color: var(--primario);
-    color: var(--blanco);
-    font-weight: 200;
-    text-align: center;
-    letter-spacing: 0.05em;
-}
-
-/* Intro-portafolio */
-
-.intro-port {
-  position: relative;
-  display: flex;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  background-color: var(--negros);
-}
-
-.intro-port-lat {
-  width: 20%;
-  background-color: var(--negros);
-}
-
-.intro-port-izq,
-.intro-port-der {
-  width: 40%;
-  position: relative;
-  overflow: hidden;
-}
-
-.img-slider {
-  position: absolute;
-  width: 100%;
-  height: 200%;
-  top: 0;
-  transition: transform 1s ease-in-out;
-}
-
-.img-slider img {
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-  display: block;
-}
-
-@keyframes slideUp {
-  from { transform: translateY(0%); }
-  to   { transform: translateY(-50%); }
-}
-
-
-
-
-   /* background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), var(--medios), var(--negros));
-    transition: background 0.1s ease; */
