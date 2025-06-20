@@ -16,6 +16,19 @@
 </head>
 
 <body class="wd100">
+
+    <header class="wd100">
+            <nav class="navbar wd1920">
+                <ul class>
+                <li><a href="{{ url_for('index') }}" class="nav__enlace">Inicio</a></li>
+                <li><a href="{{ url_for('portfolio') }}" class="nav__enlace">Portafolio</a></li>
+                <li><a href="{{ url_for('contact') }}" class="nav__enlace">Contacto</a></li>
+                </ul>
+            </nav>            
+        </>
+    </header>
+
+    <main class="wd100">
         <div class="logo-wrapper">
             <a class="logo" href="{{ url_for('index') }}" aria-label="Logotipo de Koud">
 
@@ -46,20 +59,7 @@
 
             </a>
         </div>
-
-    <header class="wd100">
-            <nav class="navbar">
-                <ul class>
-                <li><a href="{{ url_for('index') }}" class="nav__enlace">Inicio</a></li>
-                <li><a href="{{ url_for('portfolio') }}" class="nav__enlace">Portafolio</a></li>
-                <li><a href="{{ url_for('contact') }}" class="nav__enlace">Contacto</a></li>
-                </ul>
-            </nav>            
-        </>
-    </header>
-
-    <main class="wd100">
-        <section class="intro-index wd100">                    
+        <section class="intro-index wd1920">                    
         <h1 class="intro-h1">Diseño para la comunicación visual.</h1>
         <div class="saltoservicios"> 
             <svg version="1.1" id="saltoservicios" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -70,8 +70,23 @@
            
            
         </section>
-        <section class="intro-port wd100">
-        <p class="p-intro">Especializado en branding minimalista, modular y orgánico. Creo diseños intencionales y distintivos para personas emprendedoras y empresas que buscan destacar con claridad y consistencia visual. </p>
+        <section class="intro-port wd1920">
+            <div class="servicios">
+                <h2 class="servh2">Servicios</h2>
+                <ul class="servlist">
+                    <li class="servulli">Branding</li>
+                    <li class="servulli">Papelería</li>
+                    <li class="servulli">Ilustración</li>
+                    <li class="servulli">Diseño web</li>
+                </ul>
+            </div>
+            <div class="ventanaimg">
+                muestra
+            </div>
+            <div class="serv-desc">
+                    <p class="serv-intro">Especializado en branding minimalista, modular y orgánico. Creo diseños intencionales y distintivos para personas emprendedoras y empresas que buscan destacar con claridad y consistencia visual. </p>
+            </div>
+
         </section>
     </main>
 
