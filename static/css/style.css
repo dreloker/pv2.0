@@ -182,6 +182,7 @@ main {
     width: 40%;
     height: auto;
     z-index: 50;
+    padding-right: 3rem;
 }
 
 .koudk,
@@ -223,11 +224,16 @@ main {
   }
 }
 
+
+/* contenido intro */
 .intro-h1 {
     position: absolute;
     display: block;
-    bottom: 40%;
-    left: 60%;
+    bottom: 20%;
+    right: 40%;
+    width: 40%;
+    padding-right: 3rem;
+    text-align: right;
     opacity: 0;
     transform: translateX(-20px);
     transition: opacity 1.2s ease, transform 1.2s ease;
@@ -238,36 +244,69 @@ body.loaded .intro-h1 {
   transform: translateY(0);
 }
 
+.ctaservicios {
+    position: absolute;
+    display: flex;
+    height: 10vh;
+    width: 100%;
+    border-top: 1px solid var(--negros);
+    border-bottom: 1px solid var(--negros);
+    bottom: 0;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+
+
+.ctaservicios h2 {
+    position: absolute;
+    display: flex;
+    width: 60%;
+    height: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 3rem;    
+}
+
 .saltoservicios {
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 10vh;
-    background-color: var(--negros);
+    width: 40%;
+    height: 100%;
+    right: 0;
+    background-color: var(--medios);
     color: var(--claros);
     font-family: var(--fheader);
     font-size: 3rem;
-    left: 0;
-    bottom: 0;
-    cursor: pointer;
-    pointer-events: auto;
-    border-top: 1px solid var(--negros);
-    border-bottom: 1px solid var(--negros);
+    border-left: 1px solid var(--negros);    
+    animation: parpadeoFondo 1.5s ease-in-out infinite;
 }
+
+@keyframes parpadeoFondo {
+  0%, 100% {
+    background-color: var(--medios);
+  }
+  50% {
+    background-color: var(--primario);
+  }
+}
+
 
 .saltoservicios svg {
     width: 70px;
     height: auto;
 }
 
-.saltoservicios:hover {
+.ctaservicios:hover .saltoservicios {
+    animation: none;
     background-color: var(--primario);
-    transition: background-color 0.5s ease;    
+    transition: background-color 0.3s ease;
 }
 
-.saltoservicios:not(:hover) {
+
+.ctaservicios:not(:hover) .saltoservicios {
     transition: background-color 1s ease;
 }
 
@@ -277,15 +316,18 @@ body.loaded .intro-h1 {
     stroke-width: 1px;
 }
 
-.saltoservicios:hover .flechasi {
+.ctaservicios:hover .flechasi {
         fill: var(--claros);
         stroke: transparent;
 }
 
-
-
-
-
+.servh2 {
+    display: block;
+    position: absolute;
+    height: 10vh;
+    top: 20%;
+    padding-right: 3rem;
+}
 
 .intro-port {
     height: 100vh;  
@@ -305,14 +347,6 @@ body.loaded .intro-h1 {
     height: 100%;
     border-right: 1px solid var(--negros);
     border-left: 1px solid var(--negros);
-}
-
-.servh2 {
-    display: block;
-    position: absolute;
-    height: 10vh;
-    top: 20%;
-    padding-right: 3rem;
 }
 
 .servlist {

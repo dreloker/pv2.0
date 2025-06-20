@@ -5,7 +5,7 @@
 
 
  // salto "servicios" 
-  document.querySelector(".saltoservicios").addEventListener("click", () => {
+  document.querySelector(".ctaservicios").addEventListener("click", () => {
     document.querySelector(".intro-port").scrollIntoView({ behavior: "smooth" });
   });
 
