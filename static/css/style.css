@@ -70,8 +70,8 @@ h3 {
 p {
     font-family: var(--ftexto);
     font-size: 2rem;
-    font-weight: 100;
-    color: var(--negros);
+    font-weight: 400;
+    color: var(--medios);
 }
 
 /* Navbar ------------------------------*/
@@ -94,6 +94,66 @@ header {
     background-color: var(--claros);
   }
 
+  /* logo header */
+.isologoheader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 100%;  
+}
+
+.isologoheader svg {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Salto a index header */
+.saltoindex {
+    position: absolute;
+    top: 0;
+    left: 20%;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--medios);
+    color: var(--claros);
+    border-left: 1px solid var(--negros);    
+    border-right: 1px solid var(--negros);    
+    animation: parpadeoFondo 1.5s ease-in-out infinite;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.saltoindex svg {
+    width: 70px;
+    height: auto;
+    transform: scaleY(-1);
+}
+
+.saltoindex:hover {
+    animation: none;
+    background-color: var(--primario);
+    transition: background-color 0.3s ease;
+}
+
+.saltoindex:not(:hover) {
+    transition: background-color 1s ease;
+}
+
+.flechasp {
+    stroke: var(--claros);
+    fill: transparent;
+    stroke-width: 1px;
+}
+
+.saltoindex:hover .flechasp {
+        fill: var(--claros);
+        stroke: transparent;
+}
+
+/* header navbar user list */
 nav ul {
     position: absolute;
     display: flex;
@@ -122,7 +182,7 @@ nav li a {
     text-align: center;
     transition: color 0.3s ease;
 }
-/* ------------------------------------------------ */
+
 
 /* Subrayado animado */
 nav li a::after {
@@ -225,7 +285,7 @@ main {
 }
 
 
-/* contenido intro */
+/* Intro index - Sección 1 */
 .intro-h1 {
     position: absolute;
     display: block;
@@ -244,6 +304,15 @@ body.loaded .intro-h1 {
   transform: translateY(0);
 }
 
+.intro-index p {
+    position: absolute;
+    width: 30%;
+    height: auto;
+    bottom: 30%;
+    right: 10%;
+    margin-top: 2rem;
+}
+
 .ctaservicios {
     position: absolute;
     display: flex;
@@ -256,16 +325,15 @@ body.loaded .intro-h1 {
     cursor: pointer;
 }
 
-
-
 .ctaservicios h2 {
     position: absolute;
     display: flex;
-    width: 60%;
+    width: 40%;
     height: 100%;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
-    padding-right: 3rem;    
+    padding-left: 3rem; 
+    right: 0;   
 }
 
 .saltoservicios {
@@ -275,12 +343,11 @@ body.loaded .intro-h1 {
     align-items: center;
     width: 40%;
     height: 100%;
-    right: 0;
+    right: 40%;
     background-color: var(--medios);
     color: var(--claros);
-    font-family: var(--fheader);
-    font-size: 3rem;
     border-left: 1px solid var(--negros);    
+    border-right: 1px solid var(--negros);    
     animation: parpadeoFondo 1.5s ease-in-out infinite;
 }
 
@@ -292,7 +359,6 @@ body.loaded .intro-h1 {
     background-color: var(--primario);
   }
 }
-
 
 .saltoservicios svg {
     width: 70px;
@@ -321,14 +387,7 @@ body.loaded .intro-h1 {
         stroke: transparent;
 }
 
-.servh2 {
-    display: block;
-    position: absolute;
-    height: 10vh;
-    top: 20%;
-    padding-right: 3rem;
-}
-
+/* Intro port / sección 2 */
 .intro-port {
     height: 100vh;  
     position: relative;
@@ -345,8 +404,14 @@ body.loaded .intro-h1 {
     top: 0;
     width: 20%;
     height: 100%;
-    border-right: 1px solid var(--negros);
     border-left: 1px solid var(--negros);
+}
+
+.servh2 {
+    position: absolute;
+    height: 10vh;
+    top: 20%;
+    padding-right: 3rem;
 }
 
 .servlist {
@@ -368,30 +433,31 @@ body.loaded .intro-h1 {
     height: 25%;
 }
 
+.serv-desc {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    width: 40%;
+    height: 100%;
+    border-right: 1px solid var(--negros);
+    border-left: 1px solid var(--negros);
+}
+
 .ventanaimg {
     position: relative;
-    top: 0;
+    right: 0;
     width: 40%;
     height: 100%;
     border-right: 1px solid var(--negros);
     background-color: var(--secundario);
 }
 
-.serv-desc {
-    position: relative;
-    right: 0;
-    top: 0;
-    width: 40%;
-    height: 100%;
-    border-right: 1px solid var(--negros);
-}
-
-.serv-intro {
+.serv-desc p {
     position: absolute;
     top: 40%;
-    padding-left: 3rem;
+    width: 70%;
 }
-
 
 
 
