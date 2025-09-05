@@ -444,13 +444,71 @@ body.loaded .intro-h1 {
     border-left: 1px solid var(--negros);
 }
 
-.ventanaimg {
+.ventanas {
     position: relative;
-    right: 0;
-    width: 40%;
+    display: flex;
+    width: 80%;
     height: 100%;
+}
+
+.ventanabox {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    perspective: 900px; /* 🔑 necesario para ver la inclinación */
+}
+
+.ventanaimgcard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 35%;
     border-right: 1px solid var(--negros);
     background-color: var(--secundario);
+    justify-content: center;
+    align-items: center;
+
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    transition: transform 160ms cubic-bezier(.5,.9,.5,.9);
+    will-change: transform;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.imgcardtodo {
+    height: 70%;
+    width: 100%;
+    align-content: end;
+}
+
+.imgcard {
+    height: 100%;
+}
+
+.pbranding {
+    padding: 2rem;
+}
+
+
+
+/* brillo */
+.ventanaimgcard .glare {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background: radial-gradient(300px 300px at var(--gx,50%) var(--gy,50%),
+                              rgba(255,255,255,.35),
+                              rgba(255,255,255,0) 60%);
+  mix-blend-mode: lighten;
+  opacity: 0;
+  transition: opacity 150ms ease;
+}
+.ventanaimgcard:hover .glare {
+  opacity: 1;
 }
 
 .serv-desc p {
