@@ -4,11 +4,9 @@
 
     --primario: #86EAC2;
     --secundario: #E27B60;
-    --blanco: #ffffff;
     --claros: #F0F2F0;    
     --medios: #638476;
     --oscuros: #10191C;
-    --negros: #000000;
 }
 
 /*Globales*/
@@ -91,7 +89,7 @@ header {
     height: 100%;
     right: 0;
     width: 100%;
-    border-bottom: 1px solid var(--negros);
+    border-bottom: 1px solid var(--oscuros);
   }
 
   /* logo header */
@@ -152,7 +150,7 @@ nav li a::after {
 }
 
 nav li a:hover {
-        color: var(--claros);
+        color: var(--primario);
 }
 
 nav li a:hover::after {
@@ -180,7 +178,7 @@ main {
     display: flex;
     flex-direction: column;
     position: relative;
-    background-color: var(--negros);
+    background-color: var(--oscuros);
 }
 
 .intro-index {
@@ -188,8 +186,8 @@ main {
     position: relative;
     pointer-events: none;
     background-color: var(--oscuros);
-    border-left: 1px solid var(--negros);
-    border-right: 1px solid var(--negros);    
+    border-left: 1px solid var(--oscuros);
+    border-right: 1px solid var(--oscuros);    
 }
 
 /* Intro index - Sección 1 */
@@ -225,15 +223,15 @@ body.loaded .intro-h1 {
     height: 10vh;
     width: 100%;
     left: 0%;
-    border: 1px solid var(--negros);
-    background-color: var(--negros);
+    border: 1px solid var(--oscuros);
+    background-color: var(--oscuros);
     bottom: 0;
 
 }
 
 .ctaservicios:not(:hover){
     transition: background-color .7s ease;
-    background-color: var(--negros);
+    background-color: var(--oscuros);
 }
 
 .ctaservicios:hover .saltoservicios {
@@ -255,8 +253,8 @@ body.loaded .intro-h1 {
     width: 40%;
     pointer-events: auto;
     cursor: pointer;
-    border-left: 1px solid var(--negros);
-    border-right: 1px solid var(--negros);
+    border-left: 1px solid var(--oscuros);
+    border-right: 1px solid var(--oscuros);
 }
 
 .ctaservwrap:hover {
@@ -286,7 +284,7 @@ body.loaded .intro-h1 {
     align-items: center;
     width: 50%;
     height: 100%;
-    border-left: 1px solid var(--negros);  
+    border-left: 1px solid var(--oscuros);  
 }
 
 .saltoservicios svg {
@@ -296,7 +294,7 @@ body.loaded .intro-h1 {
 
 .flechasi {
     stroke-width: 1px;
-    fill: var(--negros);
+    fill: var(--oscuros);
     stroke: var(--medios);
     animation: parpadeoFondo 1.5s ease-in-out infinite;
 }
@@ -309,7 +307,7 @@ body.loaded .intro-h1 {
 
 @keyframes parpadeoFondo {
   0%, 100% {
-    stroke: var(--negros);
+    stroke: var(--oscuros);
   }
   50% {
     stroke: var(--primario);
@@ -328,8 +326,8 @@ body.loaded .intro-h1 {
     justify-content: center;
     align-items: end;
     padding-bottom: 1rem ;
-    border-left: 1px solid var(--negros);    
-    border-right: 1px solid var(--negros);    
+    border-left: 1px solid var(--oscuros);    
+    border-right: 1px solid var(--oscuros);    
 }
 
 .saltoindex svg {
@@ -351,7 +349,7 @@ body.loaded .intro-h1 {
 
 .flechasp {
     stroke-width: 1px;
-    fill: var(--negros);
+    fill: var(--oscuros);
     stroke: var(--medios);
     animation: parpadeoFondo 1.5s ease-in-out infinite;
 }
@@ -415,8 +413,8 @@ body.loaded .intro-h1 {
     top: 0;
     width: 40%;
     height: 100%;
-    border-right: 1px solid var(--negros);
-    border-left: 1px solid var(--negros);
+    border-right: 1px solid var(--oscuros);
+    border-left: 1px solid var(--oscuros);
 }
 
 .ventanas {
