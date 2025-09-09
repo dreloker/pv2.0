@@ -3,7 +3,7 @@
     --ftexto: 'Montserrat', Sans-serif;
 
     --primario: #86EAC2;
-    --secundario: ##c86346;
+    --secundario: #E27B60;
     --claros: #F0F2F0;    
     --medios: #638476;
     --oscuros: #10191C;
@@ -89,8 +89,7 @@ header {
     height: 100%;
     right: 0;
     width: 100%;
-    border: 1px solid var(--medios);
-    background-color: var(--oscuros);
+    border-bottom: 1px solid var(--oscuros);
   }
 
   /* logo header */
@@ -162,7 +161,7 @@ nav li a:hover::after {
 nav li a::before {
     content: '✦'; /* Puedes usar otros: ✦ ✱ → ★ 🡆 */
     margin-right: 0.5rem;
-    color: var(--primario);
+    color: var(--claros);
     font-size: 0.7em;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -180,24 +179,15 @@ main {
     flex-direction: column;
     position: relative;
     background-color: var(--oscuros);
-    z-index: -100; 
 }
 
 .intro-index {
+    height: 100vh;  
     position: relative;
-    height: 100vh;
+    pointer-events: none;
     background-color: var(--oscuros);
-    border-left: 1px solid var(--medios);
-    border-right: 1px solid var(--medios);
-    z-index: -10;    
-}
-
-.intro-index img {
-    position: fixed;
-    top: 5%;
-    object-fit: cover;
-    min-height: 836px;
-    z-index: -10; 
+    border-left: 1px solid var(--oscuros);
+    border-right: 1px solid var(--oscuros);    
 }
 
 /* Intro index - Sección 1 */
@@ -212,8 +202,6 @@ main {
     opacity: 0;
     transform: translateX(-20px);
     transition: opacity 1.2s ease, transform 1.2s ease;
-    color: var(--primario);
-    z-index: 10;
 }
 
 body.loaded .intro-h1 {
@@ -225,11 +213,9 @@ body.loaded .intro-h1 {
     position: absolute;
     width: 30%;
     height: auto;
-    bottom: 20%;
+    bottom: 30%;
     right: 10%;
     margin-top: 2rem;
-    color: var(--claros);
-    z-index: 10;
 }
 
 .ctaservicios {
@@ -237,11 +223,9 @@ body.loaded .intro-h1 {
     height: 10vh;
     width: 100%;
     left: 0%;
-    border-top: 1px solid var(--medios);
-    border-bottom: 1px solid var(--medios);
+    border: 1px solid var(--oscuros);
     background-color: var(--oscuros);
     bottom: 0;
-    z-index: 20;
 
 }
 
@@ -269,9 +253,8 @@ body.loaded .intro-h1 {
     width: 40%;
     pointer-events: auto;
     cursor: pointer;
-    border-left: 1px solid var(--medios);
-    border-right: 1px solid var(--medios);
-    z-index: 50;
+    border-left: 1px solid var(--oscuros);
+    border-right: 1px solid var(--oscuros);
 }
 
 .ctaservwrap:hover {
@@ -301,7 +284,7 @@ body.loaded .intro-h1 {
     align-items: center;
     width: 50%;
     height: 100%;
-    border-left: 1px solid var(--medios);  
+    border-left: 1px solid var(--oscuros);  
 }
 
 .saltoservicios svg {
@@ -343,8 +326,8 @@ body.loaded .intro-h1 {
     justify-content: center;
     align-items: end;
     padding-bottom: 1rem ;
-    border-left: 1px solid var(--medios);    
-    border-right: 1px solid var(--medios);    
+    border-left: 1px solid var(--oscuros);    
+    border-right: 1px solid var(--oscuros);    
 }
 
 .saltoindex svg {
@@ -384,9 +367,6 @@ body.loaded .intro-h1 {
     background-color: var(--oscuros);
     display: flex;
     z-index: 100;
-    border-left: 1px solid var(--medios);
-    border-bottom: 1px solid var(--medios);
-    border-right: 1px solid var(--medios);
 }
 
 .servicios {
@@ -397,6 +377,7 @@ body.loaded .intro-h1 {
     top: 0;
     width: 20%;
     height: 100%;
+    border-left: 1px solid var(--oscuros);
 }
 
 .servh2 {
@@ -432,8 +413,8 @@ body.loaded .intro-h1 {
     top: 0;
     width: 40%;
     height: 100%;
-    border-right: 1px solid var(--medios);
-    border-left: 1px solid var(--medios);
+    border-right: 1px solid var(--oscuros);
+    border-left: 1px solid var(--oscuros);
 }
 
 .ventanas {
@@ -485,6 +466,7 @@ body.loaded .intro-h1 {
     padding: 2rem;
     
 }
+
 
 
 /* brillo */
