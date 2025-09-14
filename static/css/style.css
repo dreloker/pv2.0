@@ -5,8 +5,9 @@
     --primario: #86EAC2;
     --secundario: #E27B60;
     --claros: #F0F2F0;    
-    --medios: #638476;
+    --medios: #777777;
     --oscuros: #10191C;
+    --negros: #000000;
 }
 
 /*Globales*/
@@ -68,7 +69,7 @@ h3 {
 
 p {
     font-family: var(--ftexto);
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: 400;
     color: var(--medios);
 }
@@ -87,9 +88,8 @@ header {
 .navbar {
     position: relative;
     height: 100%;
-    right: 0;
+    left: 0;
     width: 100%;
-    border-bottom: 1px solid var(--oscuros);
   }
 
   /* logo header */
@@ -110,17 +110,16 @@ header {
 nav ul {
     position: absolute;
     display: flex;
-    justify-content: flex-end;
-    width: 40%;
-    gap: 2rem;
+    justify-content: space-around;
     list-style: none;
+    width: 30%;
+    left: 60%;
     bottom: 0;
-    right: 0;
     margin-bottom: 1rem;
 }
 
 nav li {
-    flex: 1;
+
 }
 
 nav li a {
@@ -128,11 +127,12 @@ nav li a {
     display: block;
     width: 100%;
     text-decoration: none;
+    text-transform: uppercase;
     font-family: var(--ftexto);
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     font-weight: 400;
     color: var(--medios);
-    text-align: center;
+    text-align: left;
     transition: color 0.3s ease;
 }
 
@@ -145,23 +145,23 @@ nav li a::after {
     height: 1px;
     bottom: -1rem;
     left: 0%;
-    background-color: var(--medios);
+    background-color: var(--oscuros);
     transition: width 0.3s ease, left 0.3s ease;
 }
 
 nav li a:hover {
-        color: var(--primario);
+        color: var(--oscuros);
 }
 
 nav li a:hover::after {
-    width: 100%;
+    width: 6vw;
     left: 0;
 }
 
 nav li a::before {
     content: '✦'; /* Puedes usar otros: ✦ ✱ → ★ 🡆 */
     margin-right: 0.5rem;
-    color: var(--claros);
+    color: var(--primario);
     font-size: 0.7em;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -178,188 +178,79 @@ main {
     display: flex;
     flex-direction: column;
     position: relative;
-    background-color: var(--oscuros);
+    background-color: var(--primario);
 }
 
 .intro-index {
     height: 100vh;  
     position: relative;
-    pointer-events: none;
-    background-color: var(--oscuros);
-    border-left: 1px solid var(--oscuros);
-    border-right: 1px solid var(--oscuros);    
+    display: flex;
+    justify-content: flex-start;
 }
 
-/* Intro index - Sección 1 */
-.intro-h1 {
-    position: absolute;
-    display: block;
-    bottom: 20%;
-    right: 40%;
-    width: 40%;
-    padding-right: 3rem;
-    text-align: right;
-    opacity: 0;
-    transform: translateX(-20px);
-    transition: opacity 1.2s ease, transform 1.2s ease;
-}
+/* Intro index - Sección 1 - Img */
 
-body.loaded .intro-h1 {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.intro-index p {
-    position: absolute;
-    width: 30%;
-    height: auto;
-    bottom: 30%;
-    right: 10%;
-    margin-top: 2rem;
-}
-
-.ctaservicios {
-    position: absolute;
-    height: 10vh;
-    width: 100%;
+.imgintro {
+    position: relative;
     left: 0%;
-    border: 1px solid var(--oscuros);
-    background-color: var(--oscuros);
-    bottom: 0;
-
+    width: 60%;
+    background-image: url(/static/img/car-a1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
-.ctaservicios:not(:hover){
-    transition: background-color .7s ease;
-    background-color: var(--oscuros);
+/* duotono */
+.imgintro::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--primario);
+  mix-blend-mode:exclusion; /* 🔹 aplica duotono sobre imágenes */
+  pointer-events: none;
+  transition: opacity 0.3s ease;
 }
 
-.ctaservicios:hover .saltoservicios {
-    animation: none;
-    transition: background-color 0.2s ease;
-    background-color: var(--oscuros);
+/* color original */
+.imgintro::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit; /* copia el imgintro */
+  -webkit-mask-image: radial-gradient(circle 600px at var(--x, 50%) var(--y, 50%), rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 0 0;
+  -webkit-mask-size: cover;
+  pointer-events: none;
 }
 
-.ctaservicios:not(:hover) .saltoservicios {
-    transition: background-color .7s ease;
-    background-color: var(--oscuros);
-}
 
-.ctaservwrap {
-    display: flex;
-    position: relative;
-    left: 20%;
+/* Intro index - Sección 2  - Contenido*/
+
+.introindcont {
     height: 100%;
     width: 40%;
-    pointer-events: auto;
-    cursor: pointer;
-    border-left: 1px solid var(--oscuros);
-    border-right: 1px solid var(--oscuros);
-}
-
-.ctaservwrap:hover {
-    animation: none;
-    transition: background-color 0.2s ease;
-    background-color: var(--medios);
-}
-
-.ctaservwrap:not(:hover) {
-    transition: background-color .7s ease;
-    background-color: var(--oscuros);
-}
-
-.ctaservwrap h2 {
+    background-color: var(--claros); 
     display: flex;
-    width: 50%;
-    height: 100%;
-    font-size: 2rem;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding-left: 1rem;
+    padding-left: 3rem;
 }
 
-.saltoservicios {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    height: 100%;
-    border-left: 1px solid var(--oscuros);  
-}
-
-.saltoservicios svg {
-    width: 70px;
-    height: auto;
-}
-
-.flechasi {
-    stroke-width: 1px;
-    fill: var(--oscuros);
-    stroke: var(--medios);
-    animation: parpadeoFondo 1.5s ease-in-out infinite;
-}
-
-.ctaservicios:hover .flechasi {
-    animation: none;
-    fill: var(--claros);
-    stroke: var(--claros);
-}
-
-@keyframes parpadeoFondo {
-  0%, 100% {
-    stroke: var(--oscuros);
-  }
-  50% {
-    stroke: var(--primario);
-  }
-}
-
-/* Intro port / sección 2 */
-
-.saltoindex {
-    position: absolute;
-    top: 0;
-    left: 40%;
-    width: 20%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    padding-bottom: 1rem ;
-    border-left: 1px solid var(--oscuros);    
-    border-right: 1px solid var(--oscuros);    
-}
-
-.saltoindex svg {
+.intro-h1 {
     position: relative;
-    width: 70px;
-    height: auto;
-    transform: scaleY(-1);
+    width: 85%;
+    color: var(--oscuros);
 }
 
-.saltoindex:hover {
-    animation: none;
-    background-color: var(--medios);
-    transition: background-color 0.2s ease;
+.introcont-p {
+    position: relative;
+    width: 75%;
+    color: var(--medios);
+    margin-top: 3rem;
+    
 }
-
-.saltoindex:not(:hover) {
-    transition: background-color 0.7s ease;
-}
-
-.flechasp {
-    stroke-width: 1px;
-    fill: var(--oscuros);
-    stroke: var(--medios);
-    animation: parpadeoFondo 1.5s ease-in-out infinite;
-}
-
-.saltoindex:hover .flechasp {
-    fill: var(--claros);
-    stroke: var(--claros);
-    animation: none;
-}
-
+/* Intro port / sección 2 */
 
 .intro-port {
     height: 100vh;  

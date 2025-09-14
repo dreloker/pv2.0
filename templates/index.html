@@ -18,6 +18,7 @@
 <body class="wd100">
 
     <header class="wd100">
+
             <nav class="navbar wd1920">
 
                 <div class="isologoheader">
@@ -36,44 +37,29 @@
                     </svg>
                 </div>
 
-                <div class="saltoindex"> 
-                    <svg version="1.1" id="saltoservicios" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                    viewBox="0 0 87.2 46.4">
-                    <polygon class="flechasp" points="66.6,5.7 43.6,28.7 20.6,5.7 8.7,5.7 43.6,40.6 78.5,5.7 "/>
-                    </svg>
-                </div>
-
                 <ul class="navul">
                 <li><a href="{{ url_for('index') }}" class="nav__enlace">Inicio</a></li>
-                <li><a href="{{ url_for('portfolio') }}" class="nav__enlace">Portafolio</a></li>
+                <li><a href="{{ url_for('servicios') }}" class="nav__enlace">Servicios</a></li>
+                <li><a href="{{ url_for('portafolio') }}" class="nav__enlace">Portafolio</a></li>
                 <li><a href="{{ url_for('contact') }}" class="nav__enlace">Contacto</a></li>
                 </ul>
 
             </nav>            
-        </>
+
     </header>
 
     <main class="wd100">
 
         <section class="intro-index wd1920">   
+            <div class="imgintro">
 
-            <h1 class="intro-h1">
-                Diseño para la comunicación visual.
-            </h1>
-            <p>Diseños intencionales y distintivos para personas emprendedoras y empresas que buscan destacar con claridad y consistencia visual.</p>
-
-            <img class="imghero" src="{{ url_for('static', filename='img/fondointor1.jpg') }}" alt="img hero">
+            </div>
             
-            <div class="ctaservicios">
-                <div class="ctaservwrap">
-                    <h2 >Ver más</h2>
-                    <div class="saltoservicios"> 
-                        <svg version="1.1" id="saltoservicios" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                        viewBox="0 0 87.2 46.4">
-                        <polygon class="flechasi" points="66.6,5.7 43.6,28.7 20.6,5.7 8.7,5.7 43.6,40.6 78.5,5.7 "/>
-                        </svg>
-                    </div>
-                </div>
+            <div class="introindcont">
+                <h1 class="intro-h1">
+                    Servicios de Diseño y comunicación visual.
+                </h1>
+                <p class="introcont-p">Diseños distintivos para personas emprendedoras y empresas que buscan destacar con claridad y consistencia visual.</p>
             </div>            
            
         </section>
