@@ -118,10 +118,6 @@ nav ul {
     margin-bottom: 1rem;
 }
 
-nav li {
-
-}
-
 nav li a {
     position: relative;
     display: block;
@@ -178,7 +174,7 @@ main {
     display: flex;
     flex-direction: column;
     position: relative;
-    background-color: var(--primario);
+    background-color: var(--claros);
 }
 
 .intro-index {
@@ -191,37 +187,50 @@ main {
 /* Intro index - Sección 1 - Img */
 
 .imgintro {
-    position: relative;
-    left: 0%;
-    width: 60%;
-    background-image: url(/static/img/car-a1.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
+  position: relative;
+  border-radius: 10%;
+  width: 60%;
+  background-image: url(/static/img/car-a1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  transform-style: preserve-3d; /* necesario para 3D real */
+  will-change: transform;
+  transform-origin: center center;
+  cursor: pointer;
+
+  /* Sin transition para que JS controle por frame (evita conflictos). */
+  transition: none;
+
+  /* escala base que usaremos desde JS (lee si quieres) */
+  --card-scale: 0.72;
 }
 
 /* duotono */
 .imgintro::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: var(--primario);
-  mix-blend-mode:exclusion; /* 🔹 aplica duotono sobre imágenes */
-  pointer-events: none;
-  transition: opacity 0.3s ease;
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var(--primario);
+    border-radius: 10%;
+    mix-blend-mode:exclusion; /* 🔹 aplica duotono sobre imágenes */
+    pointer-events: none;
+    transition: opacity 0.3s ease;
 }
 
 /* color original */
 .imgintro::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: inherit; /* copia el imgintro */
-  -webkit-mask-image: radial-gradient(circle 600px at var(--x, 50%) var(--y, 50%), rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: 0 0;
-  -webkit-mask-size: cover;
-  pointer-events: none;
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 10%;
+    background: inherit; /* copia el imgintro */
+    -webkit-mask-image: radial-gradient(circle 600px at var(--x, 50%) var(--y, 50%), rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: 0 0;
+    -webkit-mask-size: cover;
+    pointer-events: none;
 }
 
 
