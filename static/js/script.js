@@ -2,7 +2,7 @@ const imgintro = document.querySelector('.imgintro');
 if (!imgintro) throw new Error('.imgintro no encontrado en el DOM');
 
 // parámetros para tilt
-const maxTilt = 10;
+const maxTilt = 5;
 const lerp = 0.12;
 const baseScale = 0.72;
 
