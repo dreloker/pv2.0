@@ -113,6 +113,7 @@ nav ul {
     justify-content: space-around;
     list-style: none;
     width: 30%;
+    height: 100%;
     left: 60%;
     bottom: 0;
     margin-bottom: 1rem;
